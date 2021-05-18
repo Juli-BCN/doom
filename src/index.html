@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>DOOM JS-DOS</title>
+  <script src="js-dos.js"></script>
+  <style>
+    canvas {
+      width: 1024px;
+      height: 768px;
+    }
+  </style>
+</head>
+
+<body>
+  <canvas id="jsdos"></canvas>
+  <script>
+    Dos(document.getElementById("jsdos")).ready((fs, main) => {
+      fs.extract("game.zip").then(() => {
+        main(["-c", "DOOM.BAT"])
+      });
+    });
+  </script>
+</body>
+
+</html>
