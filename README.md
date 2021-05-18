@@ -32,11 +32,17 @@ Doom Game 1993 with JS-DOS (2021)
 
 > npx create-dosbox doom game.zip
 
+>> When asked, choose option 1 ("1. DOOM.BAT")
+
 > cd doom
 
-> npm intall
+> npm install
 
-> cp index.html doom/public
+> mv public/index.html public/index2.html
+
+> cp ../index.html public
+
+> cd ../..
 
 > docker build -t doom .
 
